@@ -1,8 +1,4 @@
-package nurseangel.EnhancedShears.proxy;
+package mods.nurseangel.enhancedshears.proxy;
 
-public class CommonProxy
-{
-    public void registerRenderers()
-    {
-    }
+public class CommonProxy {
 }
