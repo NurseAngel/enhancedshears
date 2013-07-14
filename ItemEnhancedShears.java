@@ -36,12 +36,9 @@ public class ItemEnhancedShears extends ItemShears {
 	 */
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void updateIcons(IconRegister par1IconRegister) {
-		/**
-		 * ファイル名は "shear"+textureIndex+グレード+".png" <br />
-		 * 例として"shear05.png"など
-		 */
-		String str = Reference.TEXTURE_PATH + "shear" + textureIndex + grade;
-		this.iconIndex = par1IconRegister.registerIcon(str);
+	public void registerIcons(IconRegister par1IconRegister) {
+
+	    this.itemIcon = par1IconRegister.registerIcon(Reference.TEXTURE_PATH + textureIndex + grade);
 	}
+
 }

@@ -35,7 +35,7 @@ public class ModEnhancedShears {
 	 * コンストラクタ的なもの
 	 * @param event
 	 */
-	@Mod.PreInit
+	@Mod.EventHandler
 	public void myPreInitMethod(FMLPreInitializationEvent event) {
 		Configuration cfg = new Configuration(event.getSuggestedConfigurationFile());
 
@@ -63,7 +63,7 @@ public class ModEnhancedShears {
 	 * load()なもの
 	 * @param event
 	 */
-	@Mod.Init
+	@Mod.EventHandler
 	public void myInitMethod(FMLInitializationEvent event) {
 		this.addEnhancedShears();
 	}
