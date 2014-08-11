@@ -1,4 +1,4 @@
-package mods.nurseangel.enhancedshears.proxy;
+package com.github.nurseangel.enhancedshears.proxy;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

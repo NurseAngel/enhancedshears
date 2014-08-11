@@ -1,9 +1,9 @@
-package mods.nurseangel.enhancedshears;
+package com.github.nurseangel.enhancedshears;
 
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.item.ItemShears;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.item.ItemShears;
 
 public class ItemEnhancedShears extends ItemShears {
 
@@ -13,20 +13,21 @@ public class ItemEnhancedShears extends ItemShears {
 	/**
 	 * コンストラクタ
 	 *
-	 * @param par1
-	 *            アイテムID
 	 * @param grade
 	 *            グレード、0から5
 	 * @param textureIndex
 	 *            テクスチャ番号、0から1
 	 * @param maxDamage
 	 */
-	public ItemEnhancedShears(int par1, int grade, int textureIndex, int maxDamage) {
-		super(par1);
+	public ItemEnhancedShears( int grade, int textureIndex, int maxDamage) {
+		super();
 		this.setMaxDamage(maxDamage);
+		this.setTextureName(Reference.TEXTURE_PATH);
 
 		this.grade = grade;
 		this.textureIndex = textureIndex;
+
+
 	}
 
 	/**
@@ -36,9 +37,9 @@ public class ItemEnhancedShears extends ItemShears {
 	 */
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void registerIcons(IconRegister par1IconRegister) {
+	public void registerIcons(IIconRegister par1IconRegister) {
 
-	    this.itemIcon = par1IconRegister.registerIcon(Reference.TEXTURE_PATH + textureIndex + grade);
+		this.itemIcon = par1IconRegister.registerIcon(Reference.TEXTURE_PATH + textureIndex + grade);
 	}
 
 }
